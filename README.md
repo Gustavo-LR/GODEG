@@ -8,7 +8,7 @@ GO and DEGs
 
 How to install
 --------------
-Using a clean ubuntu 25.10, do the following commands using sudo. This pipeline is not resource intensive and can be run in most systems.
+Using a clean ubuntu 25.10, run the following commands using sudo. This pipeline is not resource intensive and can be run in most systems.
 ```
 sudo apt update
 sudo apt upgrade
