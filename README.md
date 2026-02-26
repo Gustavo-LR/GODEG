@@ -59,7 +59,7 @@ Result files
 
 `go_uniprot_annotator` will output blast_input_GO_biological_process.tsv, blast_input_GO_cellular_component.tsv, blast_input_GO_molecular_function.tsv and uniprot_swissprot_protein_annotation.tsv (or uniprot_protein_annotation.tsv if -bs is not provided). The first three are the GO annotation files for each GO major category, and the fourth is the proteins names annotation.
 
-`GODEG` will output five main files
+`GODEG` will result in seven main outputs:
 * deg_table_DEG.tsv (output 1): applies the FoldChange and adjusted p value cutoffs to filter DEGs. Next to each foldChange column will be a mark: UpRegulated for upregulated genes, DownRegulated for downregulated genes, NotDEG for genes that passed the adjusted p-value cutoff but not the foldChange cutoff, and null for genes that didn't pass the adjusted p-value cutoff. By default, the adjusted p-value cutoff is 0.05, foldChange upregulated > 1 and foldChange downregulated <-1.
 * filter_deg_table_DEG.tsv (output 2): this output is a filtered version of output 1, containing only DEGs (UpRegulated and DownRegulated) foldChange values. seqIDs without at least one DEG are removed. This output is handy to build for heatmap figures.
 * degs_count.tsv (output 3): contains the gene counts of DownRegulated, UpRegulated and total DEGs per sample.
