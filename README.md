@@ -1,6 +1,6 @@
 GO and DEGs
 ------------
-  `GODEG` is a python and R script pipeline to filter and annotate Differentially Expressed Genes (DEGs) using Gene Ontology (GO) and detect enriched GO terms. This pipeline is a straightforward method to integrate DEGs and GO information.
+  `GODEG` is a python and R script pipeline to annotate GO terms using UniProt database information, apply cutoffs for DEG identification, classify DEGS in the complete GO hierarchy and perform an enrichment analysis to identify overrepresented GO terms containing DEGs. This pipeline is a straightforward method to integrate DEGs and GO information.
   
   `GODEG` uses two main file inputs, a DEG table containing fold change and adjusted p values (resulted from software as DESEQ2 and EdgeR) and the genome GO annotation file. The DEG table is filtered to obtain DEGs based on adjusted p value and foldchange cutoffs, and these DEGs are assigned to GO categories (specific and parental categories). Typically, GO annotations contain the most specific GO terms. To obtain the ancestor GO categories we used the R package GO.db from bioconductor. After assigning the DEGs to GO terms, an enrichment analysis is performed to identify overrepresented GO terms containing DEGs.
   
