@@ -30,7 +30,7 @@ Default usage
 --------------
 The default command for `GODEG` is:
 ```
-python3 GODEG_v1.py -d deg_table.tsv -go genes_GO_biological_process.tsv -go_mode P --samples samples.txt -a uniprot_swissprot_protein_annotation.tsv -t 12
+python3 GODEG_v1.py -deg deg_table.tsv -goa genes_GO_biological_process.tsv -go_mode P -samp samples.txt -anno uniprot_swissprot_protein_annotation.tsv -t 12
 ```
 * The deg_table.tsv must be a table (tab separated), containing in the first column the seqIDs from the reference genome, followed by the remaining statistics as adjusted p value and foldChange, typically resulted from software as DESEq2 or EdgeR. This table can be pre-filtered to hide non-expressed genes, or unfiltered containing all the genome seqIDs. You can merge several comparisons in the same table (a common practice since they share the same seqIDs in the first column).
 * genes_GO_biological_process.tsv (with header) is the GO annotation for the complete set of genes of the reference genome. It is composed of two columns: the first is the seqIDs from the reference genome, and the second column the corresponding GO terms comma separated.
