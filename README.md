@@ -49,9 +49,9 @@ sample3_log2FoldChange  sample3_padj  sample3
 
 If you wish to annotate the GO terms for the genome seqIDs using `go_uniprot_annotator`:
 ```
-python3 go_uniprot_annotator_v1.py -bu blast_against_uniprot.tsv -bs blast_against_swissprot.tsv -t 200
+python3 go_ec_uniprot_annotator_v1.py -bu blast_against_uniprot.tsv -bs blast_against_swissprot.tsv -t 200
 ```
-* blast_against_uniprot.tsv is a tabular blast file (fmt 6) of the genomes seqIDs against UniProt. This blast table must be filtered by your annotation cutoffs (i.e.: e-value). We recommend using the most update Uniprot version as GO terms are constantly updated.
+* blast_against_uniprot.tsv is a tabular blast file (fmt 6) of the genomes seqIDs against UniProt. This blast table must be filtered by your annotation cutoffs (i.e.: e-value). If you are using diamond, remember to use the flag -max-target-seq 200 to obtain more blast hits per sequence and improve the annotation. We recommend using the most update Uniprot version as GO terms are constantly updated.
 * blast_against_swissprot.tsv is a tabular blast file (fmt 6) of the genomes seqIDs against SwissProt. Provides a second annotation to the protein names, more accurate but less comprehensive than UniProt. This parameter is optional.
 * -t 200 is the number of hits considered by each seqID. The higher the number, the more number of GO terms recovered for a seqID, but also significantly increases the run time of the annotation.
 * This script needs internet access to recover the GO terms and protein names from UniProt server.
