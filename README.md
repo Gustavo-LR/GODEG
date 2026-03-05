@@ -35,7 +35,7 @@ The default command for `GODEG` is:
 python3 GODEG_v1.py -deg deg_table.tsv -goa genes_GO_biological_process.tsv -go_mode P -samp samples.txt -anno uniprot_swissprot_protein_annotation.tsv -t 12
 ```
 * The deg_table.tsv must be a table (tab separated), containing in the first column the seqIDs from the reference genome, followed by the remaining statistics as adjusted p value and foldChange, typically resulted from software as DESEq2 or EdgeR. This table can be pre-filtered to hide non-expressed genes, or unfiltered containing all the genome seqIDs. It is strongly recommended to merge all comparisons in the same table (since they share the same seqIDs in the first column), so the estimated minimun background (-bgs) will be the same for all samples.
-* genes_GO_biological_process.tsv (with header) is the GO annotation for the complete set of genes of the reference genome. It is composed of two columns: the first is the seqIDs from the reference genome, and the second column the corresponding GO terms comma separated.
+* genes_GO_biological_process.tsv (with header) is the GO annotation for the complete set of genes of the reference genome. It is composed of two columns: the first is the seqIDs from the reference genome, and the second column the corresponding GO terms comma separated. All necessary annotation files can be obtained with `go_ec_uniprot_annotator`.
 * IMPORTANT: Be sure that the seqIDs in the first column of deg_table.tsv and genes_GO_biological_process.tsv matches. Be sure that both files seqIDs follow the same structure, and remove suffixes not shared by both seqIDs lists (i.e.: .1, .2, common to refer sequence version).
 * samples.txt is a three column tsv file (without header) used to filter deg_table.tsv. samples.txt contains in the first column the foldchange column name from deg_table.tsv, in the second column the p value column name and the third column the sample name (the alias for the pvalue and foldchange pair treatment). It is necessary to inform those because deg_tables.tsv contains other statistics (i.e.: normalized reads counts) not used by this package. It is also vital for the pipeline properly identify foldChange and adjusted p value columns to identify DEGs. Below a samples.txt example for a deg_table.tsv with three sample comparisons:
 ```
@@ -47,7 +47,7 @@ sample3_log2FoldChange  sample3_padj  sample3
 * uniprot_swissprot_protein_annotation.tsv (with header) contains the protein names for the genome seqIDs. The first column contains the genome seqIDs, and the following column the annotation information. This parameter integrates the protein names in the seqIDs from the deg_table, and it is not mandatory. If you skip this parameter, it is highly advised to annotate the deg_table.tsv before.
 * -t 12 is the number of threads (or processor cores) to run the pipeline.
 
-If you wish to annotate the GO terms for the genome seqIDs using `go_uniprot_annotator`:
+If you wish to annotate the GO terms for the genome seqIDs using `go_ec_uniprot_annotator`:
 ```
 python3 go_ec_uniprot_annotator_v1.py -bu blast_against_uniprot.tsv -bs blast_against_swissprot.tsv -t 200
 ```
