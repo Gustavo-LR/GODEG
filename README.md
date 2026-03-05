@@ -20,7 +20,7 @@ Then, all dependencies can be installed in two commands:
 sudo apt install python3 python3-pandas python3-scipy python3-statsmodels python3-xlsxwriter libcurl4-openssl-dev r-base python3-aiohttp
 sudo Rscript -e 'if (!require("BiocManager", quietly=TRUE)) install.packages("BiocManager"); BiocManager::install("GO.db")'
 ```
-Alternatively, these dependencies can also be installed with `pip3`.
+Alternatively, the python libraries dependencies can also be installed with `pip3`.
 
 `GODEG`, `ECDEG` and `go_ec_uniprot_annotator` latest versions are available in the [releases tab](https://github.com/Gustavo-LR/GODEG/releases). After installing the dependencies above, try:
 ```
