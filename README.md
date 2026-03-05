@@ -22,7 +22,7 @@ sudo Rscript -e 'if (!require("BiocManager", quietly=TRUE)) install.packages("Bi
 ```
 Alternatively, these dependencies can also be installed with `pip3`.
 
-After installing the dependencies above, try:
+`GODEG`, `ECDEG` and `go_ec_uniprot_annotator` latest versions are available in the [releases tab](https://github.com/Gustavo-LR/GODEG/releases). After installing the dependencies above, try:
 ```
 python3 GODEG_v1.py -h
 ```
