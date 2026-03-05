@@ -71,4 +71,4 @@ Result files
 
 About
 --------------
-`GODEG` and `go_uniprot_annotator` were developed by Dr. Gustavo Lima Rodrigues, supported by the Genomics Group (ESALQ, University of São Paulo) and Dr. Fei Lab (BTI, Cornell University). The academic paper about this tool is under development.
+`GODEG`, `ECDEG` and `go_ec_uniprot_annotator` were developed by Dr. Gustavo Lima Rodrigues, supported by the Genomics Group (ESALQ, University of São Paulo) and Dr. Fei Lab (BTI, Cornell University). The academic paper about this tool is under development.
