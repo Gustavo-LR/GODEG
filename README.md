@@ -43,7 +43,7 @@ sample1_log2FoldChange  sample1_padj  sample1
 sample2_log2FoldChange  sample2_padj  sample2
 sample3_log2FoldChange  sample3_padj  sample3
 ```
-* go_mode is to choose among the three major go categories": P (biological process), F (molecular function) and C (cellular component).
+* go_mode is to choose among the three major go categories: P (biological process), F (molecular function) and C (cellular component).
 * uniprot_swissprot_protein_annotation.tsv (with header) contains the protein names for the genome seqIDs. The first column contains the genome seqIDs, and the following column the annotation information. This parameter integrates the protein names in the seqIDs from the deg_table, and it is not mandatory. If you skip this parameter, it is highly advised to annotate the deg_table.tsv before.
 * -t 12 is the number of threads (or processor cores) to run the pipeline.
 
