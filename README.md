@@ -26,7 +26,7 @@ Alternatively, the python libraries dependencies can also be installed with `pip
 ```
 python3 GODEG_v1.py -h
 ```
-This will display the parameters descriptions if all dependencies were detected, and it will complain if there is a missing dependency. The R version must be >=4 and contains the latest GO.db package installed. The python version must be 3, and the following libraries must be installed manually and are not by default in python3: aiohttp, numpy, pandas, scipy, statsmodels and tqdm. The complete library list is: aiohttp, argparse, asyncio, concurrent.futures, functools, io, numpy, os, pandas, re, scipy.stats, shutil, statsmodels, subprocess, sys and tqdm.
+This will display the parameters descriptions if all dependencies were detected, and it will complain if there is a missing dependency. The R version must be >=4 and contains the latest GO.db package installed. The python version must be 3, and the following libraries must be installed manually (by the command provided above) and are not by default in python3: aiohttp, numpy, pandas, scipy, statsmodels and tqdm. The complete library list is: aiohttp, argparse, asyncio, concurrent.futures, functools, io, numpy, os, pandas, re, scipy.stats, shutil, statsmodels, subprocess, sys and tqdm.
 
 Default usage
 --------------
